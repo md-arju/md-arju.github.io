@@ -6,8 +6,8 @@ order: 1
 channel: ASR Story
 project_type: Personal channel project
 cover_title: OVERDRIVE
-cover: ""
-cover_alt: ""
+cover: /media/case-studies/overdrive/thumbnail.webp
+cover_alt: "Overdrive Bangla movie explanation video thumbnail created for ASR Story"
 role: Research, title and thumbnail, AI-assisted script writing, my own voiceover, Adobe Premiere Pro editing and upload optimization.
 period: 7–13 September 2026
 video_url: https://youtu.be/MR2WKcZiAyk
@@ -24,7 +24,17 @@ metrics:
     label: Impressions CTR
   - value: "7:20"
     label: Average view duration
-evidence: []
+evidence:
+  - image: /media/case-studies/overdrive/video-overview-7-days.webp
+    caption: "Video overview, 7–13 September 2026: 86,718 views, 8.5K watch hours and 316 subscribers gained."
+  - image: /media/case-studies/overdrive/video-reach-7-days.webp
+    caption: "Video reach, 7–13 September 2026: 676.9K thumbnail impressions, 6.5% CTR and 86.7K displayed views."
+  - image: /media/case-studies/overdrive/video-engagement-7-days.webp
+    caption: "Video engagement, 7–13 September 2026: 8.5K watch hours and 7:20 average view duration."
+  - image: /media/case-studies/overdrive/channel-overview-7-days.webp
+    caption: "ASR Story channel overview, 7–13 September 2026: 110,953 views, 10.9K watch hours and 452 subscribers gained."
+  - image: /media/case-studies/overdrive/channel-overview-28-days.webp
+    caption: "ASR Story channel overview, 17 August–13 September 2026: 124,868 views, 12.1K watch hours and 514 subscribers gained."
 source_note: "Source: creator-supplied YouTube Studio screenshots for 7–13 September 2026. K values are rounded as displayed. Studio flags an updated view-counting method in these reports. These results describe performance; they do not isolate the effect of any one tactic."
 ---
 ## The context
