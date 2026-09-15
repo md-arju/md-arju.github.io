@@ -1,0 +1,6 @@
+---
+layout: default
+title: Services
+---
+<div class="page-heading"><p class="eyebrow">How I can help</p><h1>Support for your<br>next stage.</h1><p>Practical help with planning, making and improving YouTube content.</p></div><div class="services-page"><div class="services">{% for service in site.data.services.items %}<article class="service"><span class="number">{{ forloop.index }}</span><h3>{{ service.title | escape }}</h3><p>{{ service.description | escape }}</p><small>{{ service.details | escape }}</small></article>{% endfor %}</div></div>
+{% include contact.html %}

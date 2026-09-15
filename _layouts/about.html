@@ -1,0 +1,6 @@
+---
+layout: default
+---
+<div class="page-heading"><p class="eyebrow">About me</p><h1>{{ page.title | escape }}</h1></div>
+<div class="about-grid"><div><img class="about-photo" src="{{ site.data.profile.portrait | relative_url }}" alt="{{ site.data.profile.name | escape }}" width="880" height="1107"><div class="skills">{% for skill in site.data.profile.skills %}<span>{{ skill | escape }}</span>{% endfor %}</div></div><div class="prose">{{ content }}</div></div>
+{% include contact.html %}

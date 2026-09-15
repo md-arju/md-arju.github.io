@@ -1,0 +1,22 @@
+url: https://md-arju.github.io
+baseurl: ""
+title: MD ARJU
+markdown: kramdown
+theme: null
+plugins: []
+collections:
+  case_studies:
+    output: true
+    permalink: /case-studies/:name/
+defaults:
+  - scope:
+      path: ""
+      type: case_studies
+    values:
+      layout: case
+      published: false
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

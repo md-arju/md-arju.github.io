@@ -1,0 +1,165 @@
+media:
+  input: media
+  output: /media
+  categories: [image]
+  rename: safe
+content:
+  - name: cases
+    label: Case Studies — কাজের উদাহরণ
+    type: collection
+    path: _case_studies
+    format: yaml-frontmatter
+    subfolders: false
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      primary: title
+      fields: [title, channel, published]
+      sort: order
+      order: asc
+    fields:
+      - name: title
+        label: Title — কেস স্টাডির নাম
+        type: string
+        required: true
+      - name: published
+        label: Show on website — ওয়েবসাইটে দেখাও
+        type: boolean
+        description: "চালু করে Save করলে ওয়েবসাইটে দেখা যাবে। বন্ধ করলে ওয়েবসাইটে থাকবে না, কিন্তু public GitHub repository-তে লেখা ও ছবিগুলো দেখা যেতে পারে। গোপন তথ্য এখানে রাখবে না।"
+      - name: order
+        label: Display order — তালিকার অবস্থান
+        type: number
+        required: true
+        description: "ছোট সংখ্যা আগে আসে: 1, 2, 3।"
+      - name: channel
+        label: Channel or project name
+        type: string
+        required: true
+      - name: project_type
+        label: Project type
+        type: select
+        required: true
+        options:
+          values: [Personal channel project, Client project, Independent analysis]
+      - name: summary
+        label: Summary — অল্প কথায় পরিচয়
+        type: text
+        required: true
+      - name: role
+        label: My role — তুমি কী কাজ করেছ
+        type: text
+      - name: cover
+        label: Cover image — প্রধান ছবি
+        type: image
+      - name: cover_alt
+        label: Image description — ছবির সংক্ষিপ্ত বর্ণনা
+        type: string
+      - name: cover_title
+        label: Cover text — ছবি না থাকলে এই লেখা দেখাবে
+        type: string
+      - name: period
+        label: Measurement period — ফলাফলের সময়কাল
+        type: string
+        description: "উদাহরণ: 7–13 September 2026। ভিডিও আপলোডের তারিখের সঙ্গে গুলিয়ে ফেলবে না।"
+      - name: video_url
+        label: YouTube video link
+        type: string
+        pattern:
+          regex: '^https://(youtu\.be/|www\.youtube\.com/).+$'
+          message: "Use a full https://youtu.be/ or https://www.youtube.com/ link."
+      - name: metrics
+        label: Results — ফলাফল যোগ করো
+        type: object
+        list: true
+        fields:
+          - name: value
+            label: Value — সংখ্যা বা মান
+            type: string
+            required: true
+          - name: label
+            label: Label — কীসের ফলাফল
+            type: string
+            required: true
+      - name: body
+        label: Full case study — বিস্তারিত লেখা
+        type: rich-text
+        required: true
+        description: "কাজের প্রেক্ষাপট, কী করেছ, কেন করেছ এবং কী ফল পেয়েছ তা লেখো। ছবিও যোগ করতে পারবে।"
+        options:
+          format: markdown
+          switcher: false
+      - name: evidence
+        label: Evidence images — প্রমাণের ছবি
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Screenshot or image
+            type: image
+            required: true
+          - name: caption
+            label: Caption — ছবির তথ্য ও সময়কাল
+            type: text
+            required: true
+      - name: source_note
+        label: Source note — তথ্যের উৎস ও প্রয়োজনীয় ব্যাখ্যা
+        type: text
+  - name: profile
+    label: Profile & Home — পরিচয় ও প্রথম পেজ
+    type: file
+    path: _data/profile.yml
+    format: yaml
+    fields:
+      - {name: name, label: Name, type: string, required: true}
+      - {name: role, label: Professional title, type: string, required: true}
+      - {name: headline_first, label: Headline line 1, type: string, required: true}
+      - {name: headline_second, label: Headline line 2, type: string, required: true}
+      - {name: headline_accent, label: Headline blue line, type: string, required: true}
+      - {name: intro, label: Short introduction, type: text, required: true}
+      - {name: location, label: Location, type: string, required: true}
+      - {name: experience, label: Experience, type: string, required: true}
+      - {name: portrait, label: Profile photo, type: image, required: true}
+      - name: email
+        label: Contact email
+        type: string
+        required: true
+        pattern: '^[^\s@]+@[^\s@]+\.[^\s@]+$'
+      - {name: description, label: Search and share description, type: text, required: true}
+      - {name: skills, label: Skills — দক্ষতার তালিকা, type: string, list: true}
+      - {name: results_label, label: Home results heading, type: string}
+      - {name: results_period, label: Home results channel and period, type: string}
+      - name: results
+        label: Home results — প্রথম পেজের তিনটি ফলাফল
+        type: object
+        list: {min: 3, max: 3}
+        fields:
+          - {name: value, label: Value, type: string, required: true}
+          - {name: label, label: Label, type: string, required: true}
+  - name: about
+    label: About Me — নিজের সম্পর্কে
+    type: file
+    path: about/index.md
+    format: yaml-frontmatter
+    fields:
+      - {name: layout, type: string, hidden: true}
+      - {name: title, label: Page title, type: string, required: true}
+      - {name: summary, label: Short description, type: text}
+      - name: body
+        label: About me — বিস্তারিত পরিচয়
+        type: rich-text
+        options: {format: markdown, switcher: false}
+  - name: services
+    label: Services — সেবার তালিকা
+    type: file
+    path: _data/services.yml
+    format: yaml
+    fields:
+      - name: items
+        label: Services
+        type: object
+        list: true
+        fields:
+          - {name: title, label: Service name, type: string, required: true}
+          - {name: description, label: Description, type: text, required: true}
+          - {name: details, label: Short list of tasks, type: string}

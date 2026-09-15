@@ -1,0 +1,7 @@
+<article class="work-card">
+  <a class="work-art" href="{{ study.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    {% if study.cover and study.cover != '' %}<img src="{{ study.cover | relative_url }}" alt="" loading="lazy" width="800" height="450">
+    {% else %}<div class="text-art"><span>{{ study.channel | escape }}</span><strong>{{ study.cover_title | default: study.title | escape }}</strong></div>{% endif %}
+  </a>
+  <div class="work-text"><span class="pill">{{ study.project_type | escape }}</span><h3><a href="{{ study.url | relative_url }}">{{ study.title | escape }}</a></h3><p>{{ study.summary | escape }}</p><a class="card-link" href="{{ study.url | relative_url }}">Read case study <span aria-hidden="true">↗</span></a></div>
+</article>
