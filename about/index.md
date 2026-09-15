@@ -3,14 +3,20 @@ layout: about
 title: About Arju
 summary: My background in running YouTube channels and making content.
 ---
-**Before offering services to clients, I spent seven years working on my own YouTube channels.** That experience includes movie explanations, gaming, live streaming and entertainment.
+**I learned YouTube by running my own channels and reviewing the results.** Across seven years of hands-on work, that experience has included movie explanations, gaming, live streaming and entertainment.
 
-I work across the whole production process: choosing a topic, preparing the script, recording narration, editing, packaging and reviewing the results. It helps me look at a channel beyond its keywords.
+I work across the full production process: choosing a topic, preparing the script, recording narration, editing, packaging the video and reviewing what happened after publication. That lets me examine the connection between an idea, its presentation and the audience response.
 
-I'm now bringing that hands-on experience to creator consulting and channel work. My published ASR Story case study documents my own channel.
+My public case study documents work from my own channel, ASR Story, with dated YouTube Studio screenshots and the context behind the numbers.
 
-## How I can help
+## What I work on
 
-I help creators plan videos, improve voice delivery, structure stories and understand their channel results. I also work on keyword research, titles, thumbnail concepts and video production.
+I help new creators and growing channels with audits, topic and competitor research, titles, thumbnail direction, upload optimization, content planning and analytics review. I can also support script preparation, voice delivery and editing workflows when those are part of the project.
 
-Tools used in the Overdrive project include Adobe Premiere Pro, YouTube Studio and AI-assisted script preparation.
+## How I approach a channel
+
+I start with the channel's actual position, identify the most useful priorities and agree on a clear scope before the work begins. Results are reviewed as evidence for the next decision, not treated as a guarantee that one tactic will always produce the same outcome.
+
+Tools used in the published Overdrive project include Adobe Premiere Pro, YouTube Studio and AI-assisted script preparation.
+
+[Read the documented ASR Story case study →]({{ '/case-studies/overdrive/' | relative_url }})

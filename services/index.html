@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Services
+summary: Three focused ways to get practical support with YouTube strategy, packaging and channel improvement.
 ---
-<div class="page-heading"><p class="eyebrow">How I can help</p><h1>Support for your<br>next stage.</h1><p>Practical help with planning, making and improving YouTube content.</p></div><div class="services-page"><div class="services">{% for service in site.data.services.items %}<article class="service"><span class="number">{{ forloop.index }}</span><h3>{{ service.title | escape }}</h3><p>{{ service.description | escape }}</p><small>{{ service.details | escape }}</small></article>{% endfor %}</div></div>
+<div class="page-heading"><p class="eyebrow">How I can help</p><h1>Focused support.<br>Clear deliverables.</h1><p>Choose the level of help that fits your channel now. Every project starts with the channel context, the available information and an agreed scope.</p></div>
+<div class="services-page"><div class="offer-grid">{% for service in site.data.services.items %}<article class="offer-card"><div class="offer-number">0{{ forloop.index }}</div><p class="offer-for">Best for: {{ service.best_for | escape }}</p><h2>{{ service.title | escape }}</h2><p class="offer-description">{{ service.description | escape }}</p><h3>What you receive</h3><ul>{% for item in service.deliverables %}<li>{{ item | escape }}</li>{% endfor %}</ul><div class="offer-timing"><span>Timing</span><p>{{ service.timeline | escape }}</p></div><a class="btn" href="mailto:{{ site.data.profile.email | escape }}?subject={{ service.title | uri_escape }}">Discuss this service ↗</a></article>{% endfor %}</div><div class="scope-note"><strong>Clear scope before work starts</strong><p>The exact tasks, information needed and delivery date are agreed first. Channel growth is affected by many factors, so the work focuses on informed decisions and measurable tests rather than guaranteed results.</p></div></div>
 {% include contact.html %}

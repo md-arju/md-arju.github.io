@@ -1,16 +1,19 @@
 name: MD ARJU
-role: YouTube SEO & Channel Growth Strategist
-headline_first: Better content.
-headline_second: Clear strategy.
-headline_accent: Room to grow.
-intro: I'm Arju. I help creators plan their content, improve their videos and build
-  a clearer path to YouTube growth—drawing on seven years of running my own channels.
+role: YouTube SEO & Content Growth Strategist
+headline_first: YouTube strategy.
+headline_second: Better packaging.
+headline_accent: Smarter decisions.
+intro: I'm Arju. I help new creators and growing channels plan stronger videos,
+  improve titles and thumbnails, build clear production workflows and use analytics
+  to decide what to test next.
 location: Bangladesh
 experience: 7 years
 portrait: /media/arju.webp
 email: mdarju.consulting@gmail.com
-description: MD ARJU's independent YouTube portfolio. Seven years of hands-on experience
-  in YouTube SEO, content strategy, creator guidance and video production.
+youtube_url: https://www.youtube.com/@ASR_Story
+github_url: https://github.com/md-arju
+description: MD ARJU's independent portfolio for YouTube SEO, content strategy,
+  video packaging, production and channel analysis.
 skills:
 - Keyword research
 - Competitor analysis

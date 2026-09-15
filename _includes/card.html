@@ -3,5 +3,5 @@
     {% if study.cover and study.cover != '' %}<img src="{{ study.cover | relative_url }}" alt="" loading="lazy" width="800" height="450">
     {% else %}<div class="text-art"><span>{{ study.channel | escape }}</span><strong>{{ study.cover_title | default: study.title | escape }}</strong></div>{% endif %}
   </a>
-  <div class="work-text"><span class="pill">{{ study.project_type | escape }}</span><h3><a href="{{ study.url | relative_url }}">{{ study.title | escape }}</a></h3><p>{{ study.summary | escape }}</p><a class="card-link" href="{{ study.url | relative_url }}">Read case study <span aria-hidden="true">↗</span></a></div>
+  <div class="work-text"><span class="pill">{{ study.project_type | escape }}</span><h3><a href="{{ study.url | relative_url }}">{{ study.title | escape }}</a></h3><p>{{ study.summary | escape }}</p>{% if study.metrics.size > 0 %}<div class="card-metrics">{% for metric in study.metrics limit:3 %}<div><strong>{{ metric.value | escape }}</strong><span>{{ metric.label | escape }}</span></div>{% endfor %}</div>{% endif %}{% if study.period and study.period != '' %}<p class="card-period">Measured {{ study.period | escape }}</p>{% endif %}<a class="card-link" href="{{ study.url | relative_url }}">View evidence and full case study <span aria-hidden="true">↗</span></a></div>
 </article>

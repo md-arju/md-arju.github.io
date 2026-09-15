@@ -125,6 +125,20 @@ content:
         type: string
         required: true
         pattern: '^[^\s@]+@[^\s@]+\.[^\s@]+$'
+      - name: youtube_url
+        label: YouTube channel link
+        type: string
+        required: true
+        pattern:
+          regex: '^https://(www\.)?youtube\.com/.+$'
+          message: "Use a full YouTube channel link."
+      - name: github_url
+        label: GitHub profile link
+        type: string
+        required: true
+        pattern:
+          regex: '^https://github\.com/.+$'
+          message: "Use a full https://github.com/ link."
       - {name: description, label: Search and share description, type: text, required: true}
       - {name: skills, label: Skills — দক্ষতার তালিকা, type: string, list: true}
       - {name: results_label, label: Home results heading, type: string}
@@ -161,5 +175,12 @@ content:
         list: true
         fields:
           - {name: title, label: Service name, type: string, required: true}
+          - {name: best_for, label: Best for — কার জন্য, type: string, required: true}
           - {name: description, label: Description, type: text, required: true}
+          - name: deliverables
+            label: What the client receives — ক্লায়েন্ট কী পাবে
+            type: string
+            list: true
+            required: true
           - {name: details, label: Short list of tasks, type: string}
+          - {name: timeline, label: Timing note — সময়ের ব্যাখ্যা, type: text, required: true}
