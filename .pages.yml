@@ -139,6 +139,13 @@ content:
         pattern:
           regex: '^https://github\.com/.+$'
           message: "Use a full https://github.com/ link."
+      - name: linkedin_url
+        label: LinkedIn profile link
+        type: string
+        required: true
+        pattern:
+          regex: '^https://(www\.)?linkedin\.com/in/.+$'
+          message: "Use a full LinkedIn profile link."
       - {name: description, label: Search and share description, type: text, required: true}
       - {name: skills, label: Skills — দক্ষতার তালিকা, type: string, list: true}
       - {name: results_label, label: Home results heading, type: string}
