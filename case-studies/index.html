@@ -1,32 +1,38 @@
 ---
 layout: default
 title: Case studies
-summary: Explore MD ARJU's YouTube projects, production decisions and measured results.
+summary: Browse MD ARJU's YouTube case studies by niche and open each project for verified results and supporting proof.
 ---
 <div id="case-studies-page">
   <div class="page-heading case-studies-hero">
     <p class="eyebrow">Case studies</p>
     <h1 class="case-studies-headline">Case Studies — Real Work, Real Results</h1>
-    <p>Browse my YouTube work by niche, then open any project to see the strategy, execution, results and supporting proof.</p>
+    <p>Choose a niche, then open individual projects to review the work, results and supporting evidence.</p>
   </div>
 
-  {% assign movie_cases = site.case_studies | where: 'published', true | where: 'niche', 'Movie Explanation' | sort: 'order' %}
-  {% if movie_cases.size > 0 %}
-  <section class="niche-section" id="movie-explanation" aria-labelledby="movie-explanation-title">
-    <div class="niche-heading">
-      <div>
-        <p class="niche-kicker">YouTube niche</p>
-        <h2 id="movie-explanation-title">Movie Explanation</h2>
-        <p class="niche-description">Selected movie-explanation projects with real channel results and supporting analytics.</p>
-      </div>
-      <span class="niche-count">{{ movie_cases.size }} {% if movie_cases.size == 1 %}case study{% else %}case studies{% endif %}</span>
+  {% assign movie_cases = site.case_studies | where: 'published', true | where: 'niche', 'Movie Explanation' %}
+
+  <section class="niche-library" aria-labelledby="niche-library-title">
+    <div class="niche-library-heading">
+      <p class="niche-kicker">Portfolio niches</p>
+      <h2 id="niche-library-title">Browse by niche</h2>
     </div>
 
-    <div class="work-grid case-studies-grid niche-project-grid">
-      {% for study in movie_cases %}{% include card.html %}{% endfor %}
+    <div class="niche-library-grid">
+      <a class="niche-library-card" href="{{ '/case-studies/movie-explanation/' | relative_url }}">
+        <div class="niche-library-art">
+          <img src="{{ '/media/case-studies/overdrive/thumbnail.webp' | relative_url }}" alt="Movie Explanation case studies">
+          <span class="niche-library-count">{{ movie_cases.size }} {% if movie_cases.size == 1 %}verified case study{% else %}verified case studies{% endif %}</span>
+        </div>
+        <div class="niche-library-copy">
+          <p class="niche-library-label">YouTube niche</p>
+          <h3>Movie Explanation</h3>
+          <p>Browse movie-explanation projects by sub-niche, including the strategy, performance data and proof behind each case.</p>
+          <span class="niche-library-link">Explore Movie Explanation <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
     </div>
   </section>
-  {% endif %}
 
   {% include contact.html %}
 </div>
