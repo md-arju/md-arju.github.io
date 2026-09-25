@@ -47,3 +47,88 @@
 @media(max-width:720px){
   .case-studies-headline{font-size:2.7rem!important;line-height:1.05!important}
 }
+
+/* Compact case studies overview */
+.case-studies-hero{
+  max-width:1180px;
+  padding:34px 0 22px;
+}
+.case-studies-headline{
+  font-size:clamp(2.35rem,3.25vw,3.45rem)!important;
+  line-height:1.02!important;
+  margin:10px 0 12px!important;
+}
+.case-studies-hero>p:not(.eyebrow){
+  font-size:.98rem;
+  margin:0;
+  max-width:720px;
+}
+.case-studies-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+  max-width:1120px;
+  margin:8px 0 36px;
+  align-items:start;
+}
+.case-studies-grid>.work-card:only-child{
+  grid-column:auto;
+  max-width:none;
+}
+.case-studies-grid .work-card{
+  min-width:0;
+}
+.case-studies-grid .work-art img{
+  aspect-ratio:16/9;
+  object-fit:cover;
+}
+.case-studies-grid .work-text{
+  padding:18px 20px 20px;
+}
+.case-studies-grid .work-text .pill{
+  font-size:.68rem;
+  padding:5px 9px;
+  margin-bottom:10px;
+}
+.case-studies-grid .work-text h3{
+  font-size:1.28rem;
+  line-height:1.2;
+  margin:0 0 8px;
+}
+.case-studies-grid .work-text>p:not(.card-period){
+  font-size:.87rem;
+  line-height:1.5;
+  margin:0 0 12px;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+.case-studies-grid .card-metrics{
+  gap:8px;
+  margin:2px 0 10px;
+  padding:11px 0;
+}
+.case-studies-grid .card-metrics strong{
+  font-size:1.08rem;
+}
+.case-studies-grid .card-metrics span{
+  font-size:.68rem;
+  margin-top:3px;
+}
+.case-studies-grid .card-period{
+  font-size:.7rem!important;
+  margin:0 0 8px!important;
+}
+.case-studies-grid .card-link{
+  font-size:.82rem;
+  padding-top:4px!important;
+}
+@media(max-width:900px){
+  .case-studies-grid{grid-template-columns:1fr;max-width:620px}
+  .case-studies-headline{white-space:normal}
+}
+@media(max-width:720px){
+  .case-studies-hero{padding:28px 0 18px}
+  .case-studies-headline{font-size:2.25rem!important}
+  .case-studies-grid .work-text{padding:17px}
+}
