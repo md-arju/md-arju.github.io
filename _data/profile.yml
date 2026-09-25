@@ -23,12 +23,12 @@ skills:
 - Voice delivery
 - Video editing
 - Channel analytics
-results_label: My channel. Real results.
-results_period: ASR Story · 7–13 Sep 2026
+results_label: Overdrive. Current results.
+results_period: Since published · snapshot 25 Sep 2026
 results:
-- value: 110,953
-  label: Channel views
-- value: 10.9K
+- value: 224,378
+  label: Video views
+- value: 20.7K
   label: Watch hours
-- value: '+452'
+- value: '+701'
   label: Subscribers gained
