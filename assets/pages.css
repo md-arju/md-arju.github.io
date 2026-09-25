@@ -265,3 +265,30 @@
     left:0;
   }
 }
+
+
+/* Center the shared Case Studies heading */
+#case-studies-page .case-studies-hero{
+  position:relative;
+  left:0!important;
+  width:100%;
+  max-width:none;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  text-align:center;
+}
+#case-studies-page .case-studies-headline{
+  width:100%;
+  max-width:none;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  text-align:center;
+}
+#case-studies-page .case-studies-hero .eyebrow{
+  text-align:center;
+}
+#case-studies-page .case-studies-hero>p:not(.eyebrow){
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
