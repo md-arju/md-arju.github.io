@@ -3,26 +3,30 @@ layout: default
 title: Case studies
 summary: Explore MD ARJU's YouTube projects, production decisions and measured results.
 ---
-<style>
-@media (min-width: 1201px) {
-  #case-studies-page .case-studies-grid {
-    margin-left: -105px !important;
-  }
-}
-@media (min-width: 901px) and (max-width: 1200px) {
-  #case-studies-page .case-studies-grid {
-    margin-left: -55px !important;
-  }
-}
-@media (max-width: 900px) {
-  #case-studies-page .case-studies-grid {
-    margin-left: 0 !important;
-  }
-}
-</style>
 <div id="case-studies-page">
-<div class="page-heading case-studies-hero"><p class="eyebrow">Case studies</p><h1 class="case-studies-headline">Case Studies — Real Work, Real Results</h1><p>See the context, my role, the creative decisions and the results from each project.</p></div>
-{% assign studies = site.case_studies | where: 'published', true | sort: 'order' %}
-{% if studies.size > 0 %}<div class="work-grid case-studies-grid">{% for study in studies %}{% include card.html %}{% endfor %}</div>{% else %}<p class="empty-state">Case studies are being prepared. You can contact me to discuss my work.</p>{% endif %}
-{% include contact.html %}
+  <div class="page-heading case-studies-hero">
+    <p class="eyebrow">Case studies</p>
+    <h1 class="case-studies-headline">Case Studies — Real Work, Real Results</h1>
+    <p>Browse my YouTube work by niche, then open any project to see the strategy, execution, results and supporting proof.</p>
+  </div>
+
+  {% assign movie_cases = site.case_studies | where: 'published', true | where: 'niche', 'Movie Explanation' | sort: 'order' %}
+  {% if movie_cases.size > 0 %}
+  <section class="niche-section" id="movie-explanation" aria-labelledby="movie-explanation-title">
+    <div class="niche-heading">
+      <div>
+        <p class="niche-kicker">YouTube niche</p>
+        <h2 id="movie-explanation-title">Movie Explanation</h2>
+        <p class="niche-description">Selected movie-explanation projects with real channel results and supporting analytics.</p>
+      </div>
+      <span class="niche-count">{{ movie_cases.size }} {% if movie_cases.size == 1 %}case study{% else %}case studies{% endif %}</span>
+    </div>
+
+    <div class="work-grid case-studies-grid niche-project-grid">
+      {% for study in movie_cases %}{% include card.html %}{% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% include contact.html %}
 </div>
