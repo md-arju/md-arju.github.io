@@ -374,3 +374,221 @@
   #case-studies-page .niche-description{font-size:.78rem}
   #case-studies-page .niche-count{font-size:.64rem}
 }
+
+
+/* Niche library and Movie Explanation hub */
+#case-studies-page .niche-library,
+#movie-explanation-hub .subniche-browser,
+#movie-explanation-hub .verified-projects{
+  width:min(1120px,100%);
+  margin:10px auto 38px;
+}
+.niche-library-heading,
+.subniche-heading,
+.verified-heading{
+  margin-bottom:16px;
+}
+.niche-library-heading h2,
+.subniche-heading h2,
+.verified-heading h2{
+  margin:0;
+  font-family:"Manrope","Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:1.5rem;
+  line-height:1.15;
+  letter-spacing:-.035em;
+}
+.niche-library-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+}
+.niche-library-card{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  min-width:0;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:var(--surface);
+  transition:transform .18s ease,border-color .18s ease,background .18s ease;
+}
+.niche-library-card:hover{
+  transform:translateY(-2px);
+  border-color:#4f78aa;
+  background:#122743;
+}
+.niche-library-art{
+  position:relative;
+  min-width:0;
+  background:#0b192d;
+}
+.niche-library-art img{
+  width:100%;
+  height:100%;
+  min-height:230px;
+  object-fit:cover;
+  display:block;
+}
+.niche-library-count{
+  position:absolute;
+  left:12px;
+  bottom:12px;
+  padding:6px 9px;
+  border-radius:999px;
+  background:rgba(5,14,27,.88);
+  border:1px solid #45658c;
+  color:#eaf3ff;
+  font-size:.68rem;
+  font-weight:700;
+}
+.niche-library-copy{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:26px;
+}
+.niche-library-label{
+  margin:0 0 7px!important;
+  color:var(--accent)!important;
+  font-size:.66rem!important;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.niche-library-copy h3{
+  margin:0 0 10px;
+  font-family:"Manrope","Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:1.55rem;
+  line-height:1.15;
+  letter-spacing:-.035em;
+}
+.niche-library-copy>p:not(.niche-library-label){
+  margin:0 0 18px;
+  color:var(--muted);
+  font-size:.86rem;
+  line-height:1.55;
+}
+.niche-library-link{
+  color:var(--accent);
+  font-size:.82rem;
+  font-weight:700;
+}
+
+.movie-hub-hero{
+  width:100%;
+  max-width:980px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+  padding:36px 0 22px;
+}
+.movie-hub-hero .breadcrumb{
+  display:inline-block;
+  margin-bottom:16px;
+}
+.movie-hub-hero .eyebrow{
+  margin-bottom:8px;
+}
+.movie-hub-hero h1{
+  font-family:"Manrope","Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:clamp(2.3rem,3.4vw,3.65rem);
+  line-height:1.03;
+  letter-spacing:-.05em;
+  margin:0 0 12px;
+}
+.movie-hub-hero>p:not(.eyebrow){
+  margin-left:auto;
+  margin-right:auto;
+  max-width:720px;
+  font-size:.94rem;
+}
+
+.subniche-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:12px;
+}
+.subniche-card{
+  min-width:0;
+  padding:16px 14px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:#0d1d33;
+  transition:border-color .18s ease,background .18s ease,transform .18s ease;
+}
+a.subniche-card:hover{
+  transform:translateY(-2px);
+  border-color:#4f78aa;
+  background:#122743;
+}
+.subniche-card.is-active{
+  border-color:#4f78aa;
+  background:linear-gradient(180deg,#122c4c,#10213b);
+}
+.subniche-number{
+  display:block;
+  margin-bottom:18px;
+  color:var(--accent);
+  font:700 .7rem/1 monospace;
+}
+.subniche-card strong{
+  display:block;
+  font-size:.9rem;
+  line-height:1.25;
+}
+.subniche-card small{
+  display:block;
+  margin-top:6px;
+  color:var(--muted);
+  font-size:.66rem;
+}
+
+.subniche-project-section{
+  margin:0 0 34px;
+}
+.subniche-project-heading{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding-bottom:10px;
+  margin-bottom:14px;
+  border-bottom:1px solid var(--line);
+}
+.subniche-project-heading h3{
+  margin:0;
+  font-family:"Manrope","Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:1.3rem;
+  letter-spacing:-.025em;
+}
+.subniche-project-heading span{
+  color:var(--muted);
+  font-size:.7rem;
+}
+#movie-explanation-hub .case-studies-grid{
+  position:static!important;
+  left:auto!important;
+  margin:0!important;
+  width:100%;
+  max-width:none;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+}
+@media(max-width:1050px){
+  .subniche-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .niche-library-card{grid-template-columns:1fr}
+  .niche-library-art img{min-height:0;aspect-ratio:16/9}
+}
+@media(max-width:900px){
+  .niche-library-grid{grid-template-columns:1fr}
+  #movie-explanation-hub .case-studies-grid{grid-template-columns:1fr;max-width:560px}
+}
+@media(max-width:720px){
+  .movie-hub-hero{padding:28px 0 18px}
+  .movie-hub-hero h1{font-size:2.2rem}
+  .subniche-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .niche-library-copy{padding:20px}
+}
+@media(max-width:460px){
+  .subniche-grid{grid-template-columns:1fr}
+}
