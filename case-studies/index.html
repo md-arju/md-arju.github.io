@@ -5,5 +5,5 @@ summary: Explore MD ARJU's YouTube projects, production decisions and measured r
 ---
 <div class="page-heading case-studies-hero"><p class="eyebrow">Case studies</p><h1 class="case-studies-headline">Case Studies — Real Work, Real Results</h1><p>See the context, my role, the creative decisions and the results from each project.</p></div>
 {% assign studies = site.case_studies | where: 'published', true | sort: 'order' %}
-{% if studies.size > 0 %}<div class="work-grid">{% for study in studies %}{% include card.html %}{% endfor %}</div>{% else %}<p class="empty-state">Case studies are being prepared. You can contact me to discuss my work.</p>{% endif %}
+{% if studies.size > 0 %}<div class="work-grid case-studies-grid">{% for study in studies %}{% include card.html %}{% endfor %}</div>{% else %}<p class="empty-state">Case studies are being prepared. You can contact me to discuss my work.</p>{% endif %}
 {% include contact.html %}
