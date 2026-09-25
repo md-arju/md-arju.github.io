@@ -28,6 +28,15 @@ metrics:
     label: Engaged views
   - value: "6:38"
     label: Average view duration
+evidence:
+  - image: /media/case-studies/overdrive/overview-current.webp
+    caption: "Overview — 224,378 views, 20.7K watch hours and +701 subscribers since published."
+  - image: /media/case-studies/overdrive/reach-current.webp
+    caption: "Reach — 2.1M thumbnail impressions, 5.2% CTR, 224.4K views and 115.8K unique viewers."
+  - image: /media/case-studies/overdrive/engagement-current.webp
+    caption: "Engagement — 186.5K engaged views, 20.7K watch hours and 6:38 average view duration."
+  - image: /media/case-studies/overdrive/audience-current.webp
+    caption: "Audience — 115.8K unique viewers and +701 subscribers since published."
 source_note: "Source: creator-supplied YouTube Studio screenshots captured 25 September 2026. K and M values are rounded as displayed by YouTube Studio; the Overview screenshot shows the exact 224,378 view count. The screenshots document performance and do not isolate the effect of any single tactic."
 ---
 ## The context
