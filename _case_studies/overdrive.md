@@ -1,5 +1,5 @@
 ---
-title: "Overdrive: 86,718 views in a seven-day growth window"
+title: "Overdrive: 224,378 views since published"
 summary: "A Bangla movie explanation on my own channel, ASR Story. I handled research, scripting, narration, editing and publishing."
 published: true
 order: 1
@@ -9,37 +9,30 @@ cover_title: OVERDRIVE
 cover: /media/case-studies/overdrive/thumbnail.webp
 cover_alt: "Overdrive Bangla movie explanation video thumbnail created for ASR Story"
 role: Research, title and thumbnail, AI-assisted script writing, my own voiceover, Adobe Premiere Pro editing and upload optimization.
-period: 7–13 September 2026
+period: Since published · snapshot captured 25 September 2026
 video_url: https://youtu.be/MR2WKcZiAyk
 metrics:
-  - value: "86,718"
+  - value: "224,378"
     label: Video views
-  - value: "8.5K"
+  - value: "20.7K"
     label: Watch hours
-  - value: "+316"
+  - value: "+701"
     label: Subscribers gained
-  - value: "676.9K"
+  - value: "2.1M"
     label: Thumbnail impressions
-  - value: "6.5%"
+  - value: "5.2%"
     label: Impressions CTR
-  - value: "7:20"
+  - value: "115.8K"
+    label: Unique viewers
+  - value: "186.5K"
+    label: Engaged views
+  - value: "6:38"
     label: Average view duration
-evidence:
-  - image: /media/case-studies/overdrive/video-overview-7-days.webp
-    caption: "Video overview, 7–13 September 2026: 86,718 views, 8.5K watch hours and 316 subscribers gained."
-  - image: /media/case-studies/overdrive/video-reach-7-days.webp
-    caption: "Video reach, 7–13 September 2026: 676.9K thumbnail impressions, 6.5% CTR and 86.7K displayed views."
-  - image: /media/case-studies/overdrive/video-engagement-7-days.webp
-    caption: "Video engagement, 7–13 September 2026: 8.5K watch hours and 7:20 average view duration."
-  - image: /media/case-studies/overdrive/channel-overview-7-days.webp
-    caption: "ASR Story channel overview, 7–13 September 2026: 110,953 views, 10.9K watch hours and 452 subscribers gained."
-  - image: /media/case-studies/overdrive/channel-overview-28-days.webp
-    caption: "ASR Story channel overview, 17 August–13 September 2026: 124,868 views, 12.1K watch hours and 514 subscribers gained."
-source_note: "Source: creator-supplied YouTube Studio screenshots for 7–13 September 2026. K values are rounded as displayed. Studio flags an updated view-counting method in these reports. These results describe performance; they do not isolate the effect of any one tactic."
+source_note: "Source: creator-supplied YouTube Studio screenshots captured 25 September 2026. K and M values are rounded as displayed by YouTube Studio; the Overview screenshot shows the exact 224,378 view count. The screenshots document performance and do not isolate the effect of any single tactic."
 ---
 ## The context
 
-I uploaded this video on **14 July 2026**. It was the second upload on my new channel and gained momentum weeks later. The results above cover **7–13 September 2026**, rather than the first week after publication.
+I uploaded this video on **14 July 2026**. It was the second upload on my new channel and gained momentum weeks later. The latest proof is a **since-published snapshot captured on 25 September 2026**. YouTube Studio displays the reporting range as 13 July 2026–Now in these screenshots.
 
 I made no post-publication changes to the title, thumbnail, description or tags.
 
@@ -59,12 +52,6 @@ I handled the production myself: research, title and thumbnail, script writing w
 
 ## Reading the results
 
-The video received 86,718 views during the measured seven days. YouTube's recommendations accounted for **73% of thumbnail impressions** in that report. That percentage refers to impressions, not the percentage of views from a traffic source.
+By the time this snapshot was captured, the video had reached **224,378 views**, **20.7K watch hours** and **+701 subscribers gained**. The Reach report shows **2.1M thumbnail impressions**, a **5.2% impressions click-through rate** and **115.8K unique viewers**. The Engagement report shows **186.5K engaged views** and a **6:38 average view duration**.
 
-The screenshots show the outcome, but do not establish that the title or thumbnail alone caused the growth.
-
-## The wider channel
-
-Across ASR Story, the same seven-day period recorded **110,953 views, 10.9K watch hours and 452 subscribers gained**.
-
-For **17 August–13 September 2026**, the channel recorded **124,868 views, 12.1K watch hours and 514 subscribers gained**. These periods overlap, so their totals should not be added together.
+These figures are presented as documented outcomes, not as proof that any one title, thumbnail, SEO decision or production choice caused the growth.
