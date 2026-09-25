@@ -6,6 +6,7 @@ order: 1
 channel: ASR Story
 project_type: Personal channel project
 niche: Movie Explanation
+sub_niche: Heist & Robbery
 cover_title: OVERDRIVE
 cover: /media/case-studies/overdrive/thumbnail.webp
 cover_alt: "Overdrive Bangla movie explanation video thumbnail created for ASR Story"
