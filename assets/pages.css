@@ -241,3 +241,27 @@
   .case-studies-headline{font-size:2rem!important}
   .case-studies-grid .work-text{padding:12px 13px}
 }
+
+
+/* Align case studies content slightly further left on desktop */
+@media(min-width:1201px){
+  .case-studies-hero,
+  .case-studies-grid{
+    position:relative;
+    left:-80px;
+  }
+}
+@media(min-width:901px) and (max-width:1200px){
+  .case-studies-hero,
+  .case-studies-grid{
+    position:relative;
+    left:-40px;
+  }
+}
+@media(max-width:900px){
+  .case-studies-hero,
+  .case-studies-grid{
+    position:relative;
+    left:0;
+  }
+}
