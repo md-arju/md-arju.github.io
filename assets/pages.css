@@ -781,3 +781,79 @@ a.subniche-card:hover{
   .case-detail .case-facts strong{font-size:1.12rem}
   .case-detail .prose{font-size:.9rem}
 }
+
+
+/* Full-width headline for individual case study pages */
+.case-detail-hero{
+  width:100%;
+  max-width:980px;
+  margin:0 auto;
+  padding:28px 0 18px;
+  text-align:center;
+}
+.case-detail-hero .breadcrumb{
+  display:inline-block;
+  margin-bottom:12px;
+}
+.case-detail-hero .case-detail-tags{
+  justify-content:center;
+  margin-bottom:10px;
+}
+.case-detail-hero .eyebrow{
+  margin:0 0 7px;
+  font-size:.68rem;
+  letter-spacing:.16em;
+}
+.case-detail-hero h1{
+  margin:0 auto;
+  max-width:900px;
+  font-family:"Manrope","Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:clamp(2.2rem,3.2vw,3.15rem);
+  line-height:1.04;
+  letter-spacing:-.05em;
+}
+.case-detail-top{
+  grid-template-columns:minmax(0,.82fr) minmax(420px,1.18fr);
+  gap:38px;
+  align-items:center;
+  padding:8px 0 22px;
+}
+.case-detail-intro{
+  min-width:0;
+}
+.case-detail .case-summary{
+  margin:0 0 13px;
+  color:var(--muted);
+  font-size:.92rem;
+  line-height:1.6;
+}
+.case-detail .case-role{
+  margin:0;
+  color:var(--muted);
+  font-size:.82rem;
+  line-height:1.55;
+}
+.case-detail .case-role strong{
+  color:var(--text);
+}
+@media(max-width:960px){
+  .case-detail-hero{
+    text-align:left;
+    padding:24px 0 16px;
+  }
+  .case-detail-hero .case-detail-tags{
+    justify-content:flex-start;
+  }
+  .case-detail-hero h1{
+    margin-left:0;
+  }
+  .case-detail-top{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+}
+@media(max-width:720px){
+  .case-detail-hero h1{
+    font-size:2rem;
+  }
+}
