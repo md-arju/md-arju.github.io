@@ -1,0 +1,77 @@
+---
+layout: default
+title: Movie Explanation case studies
+summary: Browse MD ARJU's Movie Explanation projects by sub-niche, with verified performance data and supporting evidence.
+---
+<div id="movie-explanation-hub">
+  <div class="page-heading movie-hub-hero">
+    <a class="breadcrumb" href="{{ '/case-studies/' | relative_url }}">← All case studies</a>
+    <p class="eyebrow">Movie Explanation</p>
+    <h1>Movie Explanation Case Studies</h1>
+    <p>Browse the different content areas I work in. Verified case studies appear below as real project data is added.</p>
+  </div>
+
+  {% assign movie_cases = site.case_studies | where: 'published', true | where: 'niche', 'Movie Explanation' %}
+  {% assign heist_cases = movie_cases | where: 'sub_niche', 'Heist & Robbery' %}
+  {% assign action_cases = movie_cases | where: 'sub_niche', 'Action' %}
+  {% assign horror_cases = movie_cases | where: 'sub_niche', 'Horror' %}
+  {% assign korean_cases = movie_cases | where: 'sub_niche', 'Korean Drama' %}
+  {% assign short_cases = movie_cases | where: 'sub_niche', 'Short Movie' %}
+
+  <section class="subniche-browser" aria-labelledby="subniche-title">
+    <div class="subniche-heading">
+      <p class="niche-kicker">Content areas</p>
+      <h2 id="subniche-title">Browse Movie Explanation by sub-niche</h2>
+    </div>
+
+    <div class="subniche-grid">
+      <a class="subniche-card is-active" href="#heist-robbery">
+        <span class="subniche-number">01</span>
+        <strong>Heist &amp; Robbery</strong>
+        <small>{{ heist_cases.size }} {% if heist_cases.size == 1 %}case study{% else %}case studies{% endif %}</small>
+      </a>
+      <div class="subniche-card">
+        <span class="subniche-number">02</span>
+        <strong>Action</strong>
+        <small>{{ action_cases.size }} case studies</small>
+      </div>
+      <div class="subniche-card">
+        <span class="subniche-number">03</span>
+        <strong>Horror</strong>
+        <small>{{ horror_cases.size }} case studies</small>
+      </div>
+      <div class="subniche-card">
+        <span class="subniche-number">04</span>
+        <strong>Korean Drama</strong>
+        <small>{{ korean_cases.size }} case studies</small>
+      </div>
+      <div class="subniche-card">
+        <span class="subniche-number">05</span>
+        <strong>Short Movie</strong>
+        <small>{{ short_cases.size }} case studies</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="verified-projects" aria-labelledby="verified-projects-title">
+    <div class="verified-heading">
+      <p class="niche-kicker">Verified work</p>
+      <h2 id="verified-projects-title">Current case studies</h2>
+    </div>
+
+    {% assign grouped_cases = movie_cases | group_by: 'sub_niche' %}
+    {% for group in grouped_cases %}
+      <section class="subniche-project-section" id="{{ group.name | slugify }}">
+        <div class="subniche-project-heading">
+          <h3>{{ group.name | default: 'Movie Explanation' }}</h3>
+          <span>{{ group.items.size }} {% if group.items.size == 1 %}project{% else %}projects{% endif %}</span>
+        </div>
+        <div class="work-grid case-studies-grid niche-project-grid">
+          {% for study in group.items %}{% include card.html %}{% endfor %}
+        </div>
+      </section>
+    {% endfor %}
+  </section>
+
+  {% include contact.html %}
+</div>
