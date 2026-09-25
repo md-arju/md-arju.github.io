@@ -1,14 +1,42 @@
 ---
 layout: default
 ---
-<article>
-<div class="page-heading"><a class="breadcrumb" href="{{ '/case-studies/' | relative_url }}">← All case studies</a><br><span class="pill">{{ page.project_type | escape }}</span><p class="eyebrow">{{ page.channel | escape }}</p><h1>{{ page.title | escape }}</h1><p>{{ page.summary | escape }}</p>{% if page.role and page.role != '' %}<p><strong>My role:</strong> {{ page.role | escape }}</p>{% endif %}</div>
-{% if page.cover and page.cover != '' %}<img class="article-cover" src="{{ page.cover | relative_url }}" alt="{{ page.cover_alt | escape }}">{% endif %}
-{% if page.period and page.period != '' %}<p class="measure-note">Measurement period: {{ page.period | escape }}</p>{% endif %}
-{% if page.metrics.size > 0 %}<div class="case-facts">{% for metric in page.metrics %}<div><strong>{{ metric.value | escape }}</strong><span>{{ metric.label | escape }}</span></div>{% endfor %}</div>{% endif %}
-{% if page.video_url contains 'https://youtu.be/' or page.video_url contains 'https://www.youtube.com/' %}<p class="after-grid"><a class="btn" href="{{ page.video_url | escape }}" target="_blank" rel="noopener noreferrer">Watch the original video ↗</a></p>{% endif %}
-<div class="prose">{{ content }}</div>
-{% if page.evidence.size > 0 %}<h2>Results & supporting images</h2><div class="gallery">{% for proof in page.evidence %}<figure><a href="{{ proof.image | relative_url }}" target="_blank" rel="noopener noreferrer"><img src="{{ proof.image | relative_url }}" alt="{{ proof.caption | escape }}" loading="lazy"></a><figcaption>{{ proof.caption | escape }}</figcaption></figure>{% endfor %}</div>{% endif %}
-{% if page.source_note and page.source_note != '' %}<p class="source-note after-grid">{{ page.source_note | escape }}</p>{% endif %}
+<article class="case-detail">
+  <div class="case-detail-top">
+    <div class="page-heading case-detail-heading">
+      <a class="breadcrumb" href="{{ '/case-studies/' | relative_url }}">← All case studies</a>
+      <div class="case-detail-tags">
+        <span class="pill">{{ page.project_type | escape }}</span>
+        {% if page.sub_niche and page.sub_niche != '' %}<span class="case-subniche">{{ page.sub_niche | escape }}</span>{% endif %}
+      </div>
+      <p class="eyebrow">{{ page.channel | escape }}</p>
+      <h1>{{ page.title | escape }}</h1>
+      <p>{{ page.summary | escape }}</p>
+      {% if page.role and page.role != '' %}<p class="case-role"><strong>My role:</strong> {{ page.role | escape }}</p>{% endif %}
+    </div>
+
+    {% if page.cover and page.cover != '' %}
+    <div class="case-detail-media">
+      <img class="article-cover" src="{{ page.cover | relative_url }}" alt="{{ page.cover_alt | escape }}">
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="case-detail-results">
+    {% if page.period and page.period != '' %}<p class="measure-note">Measurement period: {{ page.period | escape }}</p>{% endif %}
+    {% if page.metrics.size > 0 %}<div class="case-facts">{% for metric in page.metrics %}<div><strong>{{ metric.value | escape }}</strong><span>{{ metric.label | escape }}</span></div>{% endfor %}</div>{% endif %}
+    {% if page.video_url contains 'https://youtu.be/' or page.video_url contains 'https://www.youtube.com/' %}<p class="after-grid"><a class="btn" href="{{ page.video_url | escape }}" target="_blank" rel="noopener noreferrer">Watch the original video ↗</a></p>{% endif %}
+  </div>
+
+  <div class="prose">{{ content }}</div>
+
+  {% if page.evidence.size > 0 %}
+  <section class="case-evidence">
+    <h2>Results & supporting images</h2>
+    <div class="gallery">{% for proof in page.evidence %}<figure><a href="{{ proof.image | relative_url }}" target="_blank" rel="noopener noreferrer"><img src="{{ proof.image | relative_url }}" alt="{{ proof.caption | escape }}" loading="lazy"></a><figcaption>{{ proof.caption | escape }}</figcaption></figure>{% endfor %}</div>
+  </section>
+  {% endif %}
+
+  {% if page.source_note and page.source_note != '' %}<p class="source-note after-grid">{{ page.source_note | escape }}</p>{% endif %}
 </article>
 {% include contact.html %}
