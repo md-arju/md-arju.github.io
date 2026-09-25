@@ -2,16 +2,19 @@
 layout: default
 ---
 <article class="case-detail">
+  <div class="case-detail-hero">
+    <a class="breadcrumb" href="{{ '/case-studies/' | relative_url }}">← All case studies</a>
+    <div class="case-detail-tags">
+      <span class="pill">{{ page.project_type | escape }}</span>
+      {% if page.sub_niche and page.sub_niche != '' %}<span class="case-subniche">{{ page.sub_niche | escape }}</span>{% endif %}
+    </div>
+    <p class="eyebrow">{{ page.channel | escape }}</p>
+    <h1>{{ page.title | escape }}</h1>
+  </div>
+
   <div class="case-detail-top">
-    <div class="page-heading case-detail-heading">
-      <a class="breadcrumb" href="{{ '/case-studies/' | relative_url }}">← All case studies</a>
-      <div class="case-detail-tags">
-        <span class="pill">{{ page.project_type | escape }}</span>
-        {% if page.sub_niche and page.sub_niche != '' %}<span class="case-subniche">{{ page.sub_niche | escape }}</span>{% endif %}
-      </div>
-      <p class="eyebrow">{{ page.channel | escape }}</p>
-      <h1>{{ page.title | escape }}</h1>
-      <p>{{ page.summary | escape }}</p>
+    <div class="case-detail-intro">
+      <p class="case-summary">{{ page.summary | escape }}</p>
       {% if page.role and page.role != '' %}<p class="case-role"><strong>My role:</strong> {{ page.role | escape }}</p>{% endif %}
     </div>
 
